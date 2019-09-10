@@ -7,5 +7,5 @@ if ld == 0:
 elif ld > 5:
     tail = "greater than 5"
 else:
-    tail = "less than 6 and not zero"
+    tail = "less than 6 and not 0"
 print("Last digit of {} is {} and is {}".format(number, ld, tail))
