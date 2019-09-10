@@ -1,9 +1,9 @@
 def fizzbuzz():
     for i in range(1, 101):
         if i % 3 == 0:
-            print("Fizz")
+            print("Fizz", end='')
         if i % 5 == 0:
-            print("Buzz")
+            print("Buzz", end='')
         if i % 3 != 0 and i % 5 != 0:
-            print("{}".format(i))
-        print(' ' if i < 100 else '\n')
+            print("{}".format(i), end='')
+        print(' ' if i < 100 else '\n', end='')
