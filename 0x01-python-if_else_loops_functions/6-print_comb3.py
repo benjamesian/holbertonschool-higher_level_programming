@@ -3,4 +3,4 @@ for i in range(8):
     for j in range(i + 1, 10):
         print(i, end='')
         print(j, end=', ')
-print(89)
+print("{}".format(89))
