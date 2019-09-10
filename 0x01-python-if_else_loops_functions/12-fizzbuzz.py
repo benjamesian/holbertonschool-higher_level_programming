@@ -6,4 +6,4 @@ def fizzbuzz():
             print("Buzz", end='')
         if i % 3 != 0 and i % 5 != 0:
             print("{}".format(i), end='')
-        print(' ' if i < 100 else '\n', end='')
+        print(' ', end=('' if i < 100 else '\n'))
