@@ -18,6 +18,9 @@ def do_calc(a, op, b):
 
 if __name__ == "__main__":
     nargs = len(sys.argv)
+    a1 = sys.argv[1]
+    op = sys.argv[2]
+    a2 = sys.argv[3]
     if nargs != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
@@ -26,4 +29,4 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    print("{} {} {} = {}".format(*sys.argv[1:], do_calc(*sys.argv[1:])))
+    print("{} {} {} = {}".format(a1, op, a2, do_calc(a1, op, a2)))
