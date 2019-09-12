@@ -1,7 +1,6 @@
 #!/home/benjames/Python-3.4.10/python
 if __name__ == "__main__":
-    s = dir('hidden_4.pyc')
+    so = dir('hidden_4.pyc')
+    s = sorted(filter(lambda x: x[:2] != "__", so))
     for el in s:
-        if el[:2] == "__":
-            continue
         print(el)
