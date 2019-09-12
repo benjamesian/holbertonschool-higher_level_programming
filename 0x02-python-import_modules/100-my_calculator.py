@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     op = sys.argv[2]
 
-    if sys.argv[2] not in "+-*/":
+    if op not in "+-*/":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     else:
         result = div(a1, a2)
 
-    print("{} {} {} = {}".format(a1, op, a2, result))
+    print("{:d} {} {:d} = {:d}".format(a1, op, a2, result))
