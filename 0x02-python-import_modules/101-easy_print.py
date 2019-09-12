@@ -1,2 +1,1 @@
-#!/usr/bin/python3
-import os; os.write(1, b"#pythoniscool\n")
+#!/usr/bin/python3 do_print.py
