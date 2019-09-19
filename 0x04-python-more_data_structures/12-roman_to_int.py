@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     s = 0
+    if not roman_string or not isinstance(roman_string, str):
+        return 0
     current = 0
     d = {
         "M": 1000,
