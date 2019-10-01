@@ -6,10 +6,7 @@ def list_division(my_list_1, my_list_2, list_length):
     while n < list_length:
         try:
             el = my_list_1[n] / my_list_2[n]
-        except IndexError:
-            el = 0
-            pass
-        except ZeroDivisionError:
+        except (IndexError, ZeroDivisionError, TypeError):
             el = 0
             pass
         finally:
