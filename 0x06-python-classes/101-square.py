@@ -18,7 +18,7 @@ class Square:
             for _ in range(self.position[1]):
                 out += '\n'
             for _ in range(self.size):
-                out += " " * self.position[0] + "#" * self.size
+                out += " " * self.position[0] + "#" * self.size + '\n'
         return out
 
     @property
