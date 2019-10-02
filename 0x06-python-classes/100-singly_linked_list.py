@@ -14,7 +14,7 @@ class Node:
 
     @property
     def data(self):
-        return self.data
+        return self.__data
 
     @data.setter
     def data(self, d):
@@ -24,7 +24,7 @@ class Node:
 
     @property
     def next_node(self):
-        return self.next_node
+        return self.__next_node
 
     @next_node.setter
     def next_node(self, n):
@@ -39,14 +39,15 @@ class SinglyLinkedList:
     def __init__(self):
         """Initialize a SinglyLinkedList
         """
-        self.__head = Node()
+        self.__head = None
 
     def __str__(self):
         out = ""
         n = self.__head
         while n is not None:
-            out = out + n.data + '\n'
+            out = out + str(n.data) + '\n'
             n = n.next_node
+        return out
 
     def sorted_insert(self, data):
         n = self.__head
