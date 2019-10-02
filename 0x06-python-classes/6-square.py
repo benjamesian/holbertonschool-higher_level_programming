@@ -34,6 +34,8 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not all(lambda x: isinstance(x, int) for x in position):
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif not all(lambda x: x >= 0 for x in position):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     def area(self):
