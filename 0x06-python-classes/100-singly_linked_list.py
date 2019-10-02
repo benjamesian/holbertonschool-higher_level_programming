@@ -7,6 +7,8 @@ class Node:
     """Node in a SinglyLinkedList
     """
     def __init__(self, data, next_node=None):
+        """Initialize a Node
+        """
         self.data = data
         self.next_node = next_node
 
@@ -34,10 +36,10 @@ class Node:
 class SinglyLinkedList:
     """Singly Linked List of Nodes
     """
-    __head = Node()
-
     def __init__(self):
-        pass
+        """Initialize a SinglyLinkedList
+        """
+        self.__head = Node()
 
     def __str__(self):
         out = ""
