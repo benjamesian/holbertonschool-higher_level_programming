@@ -47,7 +47,7 @@ class SinglyLinkedList:
         while n is not None:
             out = out + str(n.data) + '\n'
             n = n.next_node
-        return out
+        return out.strip()
 
     def sorted_insert(self, data):
         n = self.__head
