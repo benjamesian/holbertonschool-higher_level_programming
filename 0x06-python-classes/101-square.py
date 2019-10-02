@@ -19,7 +19,7 @@ class Square:
                 out += '\n'
             for _ in range(self.size):
                 out += " " * self.position[0] + "#" * self.size + '\n'
-        return out
+        return out.strip('\n')
 
     @property
     def size(self):
