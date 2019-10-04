@@ -26,5 +26,5 @@ def matrix_divided(matrix, div):
 
 def t_err():
     """ TypeError with a message """
-    raise TypeError("matrix must be a matrix (list of lists) of\
-    integers/floats")
+    msg = "matrix must be a matrix (list of lists) of integers/floats"
+    raise TypeError(msg)
