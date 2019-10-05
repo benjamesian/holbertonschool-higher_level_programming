@@ -8,6 +8,8 @@ def matrix_divided(matrix, div):
     """ Divide all elements in a matrix by a value """
     if not isinstance(matrix, list):
         t_err()
+    if not matrix:
+        t_err()
     if not all(isinstance(x, list) for x in matrix):
         t_err()
     if not all(isinstance(x, int) or isinstance(x, float)
@@ -19,9 +21,10 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
     if not (isinstance(div, int) or isinstance(div, float)):
         raise TypeError("div must be a number")
-    if div == 0:
+    try:
+        return [[round(x / div, 2) for x in y] for y in matrix]
+    except ZeroDivisionError:
         raise ZeroDivisionError("division by zero")
-    return [[round(x / div, 2) for x in y] for y in matrix]
 
 
 def t_err():
