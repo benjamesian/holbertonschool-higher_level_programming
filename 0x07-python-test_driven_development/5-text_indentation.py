@@ -15,7 +15,7 @@ def text_indentation(text):
     text = text.split(':')
     text = ':\n'.join(text)
     text = text.split('\n')
-    text = list(map(lambda x: x.strip(' '), text))
+    text = list(map(lambda x: x.strip(' \t'), text))
     text = '\n\n'.join(text)
     text = text.strip()
     if text and any(text[-1] == x for x in ['.', '?', ':']):
