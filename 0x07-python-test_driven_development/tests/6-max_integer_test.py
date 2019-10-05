@@ -36,4 +36,3 @@ class TextMaxInteger(unittest.TestCase):
 
     def test_list_with_floats(self):
         self.assertEqual(max_integer([1, 1.5]), 1.5)
-        self.assertEqual(max_integer([0, float('inf')], float('inf')))
