@@ -14,16 +14,16 @@ class TextMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0]), 0)
 
     def test_increasing_list(self):
-        self.assertEqual(max_integer([1,2]), 2)
+        self.assertEqual(max_integer([1, 2]), 2)
 
     def test_decreasing_list(self):
-        self.assertEqual(max_integer([2,1]), 2)
+        self.assertEqual(max_integer([2, 1]), 2)
 
     def test_list_with_negatives(self):
-        self.assertEqual(max_integer([2,-1,1]), 2)
+        self.assertEqual(max_integer([2, -1, 1]), 2)
 
     def test_list_only_negatives(self):
-        self.assertEqual(max_integer([-2,-1,-3]), -1)
+        self.assertEqual(max_integer([-2, -1, -3]), -1)
 
     def test_bad_parameter_type(self):
         with self.assertRaises(TypeError):
