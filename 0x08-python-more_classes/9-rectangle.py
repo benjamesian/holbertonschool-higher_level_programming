@@ -13,7 +13,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        line = str(Rectangle.print_symbol) * self.width + '\n'
+        line = str(self.print_symbol) * self.width + '\n'
         return (self.height * line).strip()
 
     def __repr__(self):
