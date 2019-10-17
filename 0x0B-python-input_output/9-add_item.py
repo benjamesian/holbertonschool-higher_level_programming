@@ -12,4 +12,4 @@ if __name__ == '__main__':
     l = []
     if os.path.exists(filename):
         l = fl(filename) or []
-    fs(l + sys.argv.split(' '), filename)
+    fs(l + sys.argv, filename)
