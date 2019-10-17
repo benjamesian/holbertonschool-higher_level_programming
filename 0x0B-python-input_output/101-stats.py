@@ -7,7 +7,7 @@ def my_print(d, size):
     """ formatted printing """
     print('File size: {:d}'.format(size))
     for key in sorted(d):
-        print('{:s}: {:s}'.format(key, d[key]))
+        print('{:s}: {:d}'.format(key, d[key]))
 
 if __name__ == '__main__':
     d = {}
