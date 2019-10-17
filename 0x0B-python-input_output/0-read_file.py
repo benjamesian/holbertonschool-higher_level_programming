@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """ func doc """
     with open(filename, 'r', encoding='utf-8') as f:
-        print(f.read())
+        print(f.read(), end='')
