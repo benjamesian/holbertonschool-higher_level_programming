@@ -11,6 +11,7 @@ def my_print(d, size):
 
 
 if __name__ == '__main__':
+    """ hehe """
     d = {}
     size = 0
     while True:
