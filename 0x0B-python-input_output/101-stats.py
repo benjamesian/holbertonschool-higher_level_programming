@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" mod doc """
+"""mod doc"""
 import sys
 
 
