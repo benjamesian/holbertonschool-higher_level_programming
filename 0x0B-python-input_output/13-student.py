@@ -20,5 +20,6 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
+        """ loadyload """
         for key in json:
-            self.key = json[key]
+            setattr(self, key, json[key])
