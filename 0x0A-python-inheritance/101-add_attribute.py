@@ -4,5 +4,5 @@
 
 def add_attribute(obj, name, value):
     """ func doc """
-    if hasattr(obj, name):
+    if not hasattr(obj, name):
         setattr(obj, name, value)
