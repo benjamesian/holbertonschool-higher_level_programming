@@ -1,17 +1,24 @@
 #!/usr/bin/python3
-"""mod doc"""
+"""mod doc
+
+this is my glorious docstring
+"""
 import sys
 
 
 def my_print(d, size):
-    """ formatted printing """
+    """formatted printing
+
+    Parameters:
+    d (dict): a dictionary
+    size (int): a number
+    """
     print(f'File size: {size}')
     for key in sorted(d):
         print(f'{key}: {d[key]}')
 
 
 if __name__ == '__main__':
-    """ hehe """
     d = {}
     size = 0
     while True:
