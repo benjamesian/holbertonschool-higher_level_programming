@@ -11,7 +11,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ JSONified Student """
-        if attrs and isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
+        if isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
             d = {}
             for attr in attrs:
                 if attr in self.__dict__:
