@@ -12,14 +12,20 @@ def my_print(d, size):
 if __name__ == '__main__':
     d = {}
     size = 0
+    leave = False
     while True:
         try:
             for i in range(10):
-                line = sys.stdin.readline().split()
+                line = sys.stdin.readline()
                 if line:
-                    d[line[-2]] = d.get(line[-2], 0) + 1
-                    size += int(line[-1])
+                    arr = line.split()
+                    d[arr[-2]] = d.get(arr[-2], 0) + 1
+                    size += int(arr[-1])
+                else:
+                    leave = True
             my_print(d, size)
+            if leave:
+                break
         except KeyboardInterrupt as inst:
             my_print(d, size)
             raise inst
