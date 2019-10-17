@@ -9,7 +9,8 @@ if __name__ == '__main__':
     fl = __import__('8-load_from_json_file').load_from_json_file
 
     filename = 'add_item.json'
-    with open(filename, 'w'):
-        pass
+    with open(filename, 'w') as f:
+        if not f.read():
+            json.dump([], f)
     obj = fl(filename)
     fs(obj.extend(sys.argv), filename)
