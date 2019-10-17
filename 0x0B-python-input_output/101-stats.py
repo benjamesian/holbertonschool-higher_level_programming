@@ -23,6 +23,7 @@ if __name__ == '__main__':
                     size += int(arr[-1])
                 else:
                     leave = True
+                    break
             my_print(d, size)
             if leave:
                 break
