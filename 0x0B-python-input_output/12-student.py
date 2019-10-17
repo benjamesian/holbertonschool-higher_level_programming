@@ -15,6 +15,6 @@ class Student:
             d = {}
             for attr in attrs:
                 if attr in self.__dict__:
-                    d[attr] = self.dict[attr]
+                    d[attr] = self.__dict__[attr]
             return d
         return self.__dict__
