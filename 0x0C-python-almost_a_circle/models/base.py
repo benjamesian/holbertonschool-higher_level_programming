@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Base Module """
 import json
+from os.path import isfile
 import turtle
 
 
@@ -37,7 +38,10 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Load Base instances from a file"""
-        with open(cls.__name__ + '.json', 'r') as f:
+        filename = cls.__name__ + '.json'
+        if not isfile(filename):
+            return []
+        with open(filename, 'r') as f:
             return [cls.create(**x) for x in Base.from_json_string(f.read())]
 
     @classmethod
@@ -56,12 +60,14 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         objects = []
-        with open(cls.__name__ + '.csv', 'r') as f:
-            for line in f:
-                args = list(map(int, line.split(',')))
-                new = cls(1, 1)
-                new.update(*args)
-                objects.append(new)
+        filename = cls.__name__ + '.csv'
+        if isfile(filename):
+            with open(filename, 'r') as f:
+                for line in f:
+                    args = list(map(int, line.split(',')))
+                    new = cls(1, 1)
+                    new.update(*args)
+                    objects.append(new)
         return objects
 
     @classmethod
