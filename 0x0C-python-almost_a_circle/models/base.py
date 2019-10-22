@@ -18,12 +18,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Convert a list of dictionaries to a json string"""
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
+        """Convert a json string to a Python object"""
         if not json_string:
             return []
         return json.loads(json_string)
@@ -46,6 +48,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """save a list of objects represented as csv in a file"""
         with open(cls.__name__ + '.csv', 'w') as f:
             text = ''
             for o in list_objs:
@@ -59,6 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """load a list of object represented as csv in a file"""
         objects = []
         filename = cls.__name__ + '.csv'
         if isfile(filename):
@@ -79,6 +83,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """draw rectangles and squares on a window"""
         pen = turtle.Turtle()
         pen.speed(3)
         for rect in list_rectangles + list_squares:
