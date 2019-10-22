@@ -6,7 +6,6 @@ from models.base import Base
 class Rectangle(Base):
     """Rectangle Class"""
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -74,14 +73,15 @@ class Rectangle(Base):
         """Print the Rectangle to stdout"""
         for _ in range(self.y):
             print('')
-        print(((' ' * self.x + '#' * self.width + '\n') * self.height).rstrip())
+        p = ((' ' * self.x + '#' * self.width + '\n') * self.height).rstrip()
+        print(p)
 
     def update(self, *args, **kwargs):
         """update the instance attributes"""
         if args:
-            arr = ['id', 'width', 'height', 'x', 'y']
+            tup = ('id', 'width', 'height', 'x', 'y')
             for i, arg in enumerate(args):
-                setattr(self, arr[i], arg)
+                setattr(self, tup[i], arg)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)

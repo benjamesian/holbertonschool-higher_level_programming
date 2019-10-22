@@ -24,9 +24,9 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update the square"""
         if args:
-            arr = ['id', 'size', 'x', 'y']
+            tup = ('id', 'size', 'x', 'y')
             for i, arg in enumerate(args):
-                setattr(self, arr[i], arg)
+                setattr(self, tup[i], arg)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
