@@ -26,6 +26,8 @@ class TestRectangle(unittest.TestCase):
         """Test for __str__ method"""
         s = '[Rectangle] (1) 1/1 - 1/1'
         self.assertEqual(str(self.r), s)
+        r = Rectangle(1, 1, id=1)
+        self.assertEqual(str(r), '[Rectangle] (1) 0/0 - 1/1')
 
     def test_width_type(self):
         """Test for setting width attr"""
