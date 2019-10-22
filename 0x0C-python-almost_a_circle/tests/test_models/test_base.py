@@ -7,15 +7,13 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     """Class for testing the Base geometry class"""
-    def __init__(self, testname):
-        super(TestBase, self).__init__(testname)
-        self.d = Base()
 
     def test_id(self):
         """Test id setting on Base class"""
-        self.assertEqual(self.d.id, 1)
-        nxt = Base(12)
-        self.assertEqual(nxt.id, 12)
+        b = Base()
+        self.assertEqual(b.id, 1)
+        b = Base(12)
+        self.assertEqual(b.id, 12)
 
     def test_same_id(self):
         """Objects with same id are not the same"""
@@ -24,6 +22,16 @@ class TestBase(unittest.TestCase):
         self.assertEqual(a.id, b.id)
         self.assertIsNot(a, b)
 
+    def test_to_json_string(self):
+        """test converstion of python object to a json string"""
+        self.assertEqual(Base.to_json_string([]), '[]')
+        self.assertEqual(Base.to_json_string([{'a': 1}]), '[{"a": 1}]')
+
+    def test_from_json_string(self):
+        """test conversion of json string to python object"""
+        obj = [{'a': 1}]
+        json_string = Base.to_json_string(obj)
+        self.assertEqual(Base.from_json_string(json_string), obj)
 
 if __name__ == '__main__':
     unittest.main()
