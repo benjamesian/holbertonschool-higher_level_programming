@@ -6,6 +6,7 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """Class for testing the Base geometry class"""
     def __init__(self, testname):
         super(TestBase, self).__init__(testname)
         self.d = Base()
