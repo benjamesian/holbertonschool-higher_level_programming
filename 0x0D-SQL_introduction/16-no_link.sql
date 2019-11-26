@@ -1,3 +1,5 @@
+-- Select all scores and non-null names from table
+-- Ordered by descending score
 SELECT score, name
 FROM second_table
 WHERE name IS NOT NULL

@@ -1,3 +1,5 @@
+-- Create a new table and insert data into it
+-- Command will not fail if table exists
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
