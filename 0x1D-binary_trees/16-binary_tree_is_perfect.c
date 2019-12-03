@@ -1,10 +1,23 @@
 #include "binary_trees.h"
 
+/**
+ * max - return max value
+ * @a: a value
+ * @b: another value
+ *
+ * Return: The maximum of a and b
+ */
 size_t max(size_t a, size_t b)
 {
 	return (a > b ? a : b);
 }
 
+/**
+ * _binary_tree_height - get raw height of a binary tree
+ * @tree: tree to find height of
+ *
+ * Return: the height of the tree.
+ */
 size_t _binary_tree_height(const binary_tree_t *tree)
 {
 	if (!tree)
@@ -15,6 +28,12 @@ size_t _binary_tree_height(const binary_tree_t *tree)
 		_binary_tree_height(tree->right)));
 }
 
+/**
+ * _binary_tree_is_perfect - check if a binary tree is perfect recursively
+ * @tree: tree to inspect
+ *
+ * Return: 1 if tree is perfect, else 0
+ */
 int _binary_tree_is_perfect(const binary_tree_t *tree, size_t height)
 {
 	if (!tree)
@@ -27,6 +46,12 @@ int _binary_tree_is_perfect(const binary_tree_t *tree, size_t height)
 		&& _binary_tree_is_perfect(tree->right, height - 1));
 }
 
+/**
+ * binary_tree_is_perfect - check if a binary tree is perfect
+ * @tree: tree to inspect
+ *
+ * Return: 1 if tree is perfect, else 0
+ */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t height;
