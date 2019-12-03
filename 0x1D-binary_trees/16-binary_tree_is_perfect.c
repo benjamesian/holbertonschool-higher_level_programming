@@ -31,6 +31,7 @@ size_t _binary_tree_height(const binary_tree_t *tree)
 /**
  * _binary_tree_is_perfect - check if a binary tree is perfect recursively
  * @tree: tree to inspect
+ * @height: expected height of the tree from current node
  *
  * Return: 1 if tree is perfect, else 0
  */
