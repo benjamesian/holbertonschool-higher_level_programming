@@ -8,7 +8,7 @@ if __name__ == "__main__":
     all_states = cur.execute("""
     SELECT id, name
     FROM states
-    WHERE name='{:s}'
+    WHERE name='{}'
     ORDER BY id ASC
     """.format(argv[4]))
     for record in cur.fetchall():
