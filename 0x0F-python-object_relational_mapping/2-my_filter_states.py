@@ -8,9 +8,8 @@ if __name__ == "__main__":
     matched_states = cur.execute("""
     SELECT id, name
     FROM states
-    WHERE name='{:s}'
+    WHERE BINARY name='{:s}'
     ORDER BY id ASC
     """.format(argv[4]))
-    if matched_states:
-        for record in cur.fetchall():
-            print(record)
+    for record in cur.fetchall():
+        print(record)
