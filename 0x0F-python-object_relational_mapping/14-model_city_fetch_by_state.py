@@ -14,4 +14,3 @@ if __name__ == '__main__':
         .order_by(City.id)
     for c, s in q.all():
         print('{}: ({}) {}'.format(s.name, c.id, c.name))
-    # session.commit()
