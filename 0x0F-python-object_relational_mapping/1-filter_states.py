@@ -8,7 +8,7 @@ if __name__ == "__main__":
     all_states = cur.execute("""
     SELECT id, name
     FROM states
-    WHERE name LIKE 'N%'
+    WHERE name LIKE BINARY 'N%'
     ORDER BY id ASC
     """)
     for record in cur.fetchall():
