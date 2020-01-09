@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def find_peak_helper(start, stop, l):
     if start >= stop:
         return None
@@ -20,6 +21,7 @@ def find_peak_helper(start, stop, l):
         return lpeak
     return None if mid == start else find_peak_helper(mid, stop, l)
 
+
 def find_peak(list_of_integers):
     length = len(list_of_integers)
     if length == 0:
@@ -27,11 +29,3 @@ def find_peak(list_of_integers):
     elif length <= 2:
         return max(list_of_integers)
     return find_peak_helper(0, length, list_of_integers)
-
-print(find_peak([1, 2, 3, 4, 5]))
-print(find_peak([1, 2, 4, 6, 3]))
-print(find_peak([4, 2, 1, 2, 3, 1]))
-print(find_peak([2, 2, 2]))
-print(find_peak([]))
-print(find_peak([-2, -4, 2, 1]))
-print(find_peak([4, 2, 1, 2, 3, 1]))
