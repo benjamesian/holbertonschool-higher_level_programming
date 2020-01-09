@@ -26,4 +26,12 @@ def find_peak(list_of_integers):
         return None
     elif length <= 2:
         return max(list_of_integers)
-    return find_peak_helper(0, length - 1, list_of_integers)
+    return find_peak_helper(0, length, list_of_integers)
+
+print(find_peak([1, 2, 3, 4, 5]))
+print(find_peak([1, 2, 4, 6, 3]))
+print(find_peak([4, 2, 1, 2, 3, 1]))
+print(find_peak([2, 2, 2]))
+print(find_peak([]))
+print(find_peak([-2, -4, 2, 1]))
+print(find_peak([4, 2, 1, 2, 3, 1]))
