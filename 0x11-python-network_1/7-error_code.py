@@ -6,5 +6,5 @@ if __name__ == '__main__':
     r = requests.get(argv[1])
     if not r.ok:
         print('Error code: {:d}'.format(r.status_code))
-    else
+    else:
         print(r.text)
