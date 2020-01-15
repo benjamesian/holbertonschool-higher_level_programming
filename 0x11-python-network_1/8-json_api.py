@@ -6,7 +6,7 @@ if __name__ == '__main__':
     payload = {'q': '' if len(argv) <= 1 else argv[1]}
     r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     try:
-        j = r.json
+        j = r.json()
         if not j:
             print('No result')
         else:
