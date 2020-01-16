@@ -2,6 +2,7 @@
 import requests
 from sys import argv
 
+
 def print_page(page):
     for el in page.get('results'):
         print(el.get('name'))
