@@ -2,6 +2,7 @@
 import requests
 from sys import argv
 
+
 def print_page(json):
     for result in json.get('results'):
         print(result.get('name'))
