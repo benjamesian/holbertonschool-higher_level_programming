@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
 exports.logMe = function (item) {
-  logMe.counter = (logMe.counter || -1) + 1;
-  console.log(`${logMe.counter}: ${item}`); 
+  this.counter = (this.counter === undefined) ? 0 : this.counter + 1;
+  console.log(`${this.counter}: ${item}`);
 };
